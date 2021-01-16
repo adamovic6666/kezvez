@@ -1,0 +1,38 @@
+.hero {
+
+    padding-top: 15rem;
+    margin: 0 auto;
+    max-width: 90vw;
+
+    @include forLargeScreens(900) {
+        padding-top: 7.5rem;
+        max-width: 80vw;
+    }
+
+    &__box {
+        margin: 0 auto 6rem;
+        height: 15rem;
+        width: auto;
+        display: flex;
+        justify-content: center;
+
+        @include forLargeScreens(900) {
+            position: relative;
+            height: 17rem;
+        }  
+    }
+
+    &__img {
+        height: 100%;
+
+        @include forLargeScreens(900) {
+            position: absolute;
+            height: 20rem;
+        }  
+
+        @include forLargeScreens(1200) {
+            position: absolute;
+            height: 25rem;
+        }  
+    }
+}

@@ -1,0 +1,134 @@
+.main-page__items {
+
+    padding: 0 0 10rem;
+    margin: 0 auto;
+    grid-gap: 3rem;
+
+    @include forLargeScreens(900) {
+        padding: 5rem 5rem 10rem;
+        max-width: $default-width;
+    }
+
+    @include forLargeScreens(1200) {
+        grid-gap: 6rem;
+    }
+
+}
+
+.section-products {
+
+    width: 85vw;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @include forLargeScreens(900) {
+        max-width: $default-width;
+    }
+
+}
+
+.create {
+    margin: 0 auto;
+    padding: 0 5rem 10rem;
+    text-align: center;
+
+    @include forLargeScreens(900) {
+        width: 100ch;
+        padding: 0 5rem 15rem;
+    }
+
+    &__para {
+        font-size: 1.7rem;
+        color: $color-white;
+    }
+
+    &__heading {
+        background-image: linear-gradient(to right bottom, $color-primary ,$color-yellow) !important;
+    }
+
+    &__link {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.product {
+
+    &__container {
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+
+        @include display-flex--column;
+        align-items: center;
+
+        @include forLargeScreens(900) {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        a {
+            margin-top: auto;
+        }
+    }
+
+    &__name {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-white;
+    }
+
+    &__price {
+        text-align: center;
+        color: $color-primary-dark;
+        opacity: .8;
+        font-size: 1.7rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 20rem;
+        object-fit: contain;
+        transition: all .4s;
+
+        @include forLargeScreens(900) {
+            height: 30rem;
+        }
+    }
+
+    @include forLargeScreens(900) {
+        &__image:hover {
+            cursor: pointer;
+            transform: scale(1.05) translateY(5px);
+        }
+    }
+
+    &__other-items {
+
+
+        img:hover {
+            cursor: auto !important;
+            transform: scale(1) translateY(0) !important;
+        }
+    }
+}
+
+.open-backdrop {
+    display: block;
+    transition: all .8s;
+}
+
+.open-modal {
+
+    z-index: 2500;
+    animation: openModal .3s .2s;
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+    animation: popUp .8s cubic-bezier(.65,.2,.58,1.67);
+}

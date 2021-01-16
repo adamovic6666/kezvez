@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Courier Prime', monospace;
+}
+
+html {
+
+    font-size: 50%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include forLargeScreens(900) {
+        font-size: 56.25%;; //1rem = 12, 12/16
+    }
+    
+    @include forLargeScreens(1200) {
+        font-size: 62.5%;; //1rem = 12, 12/16
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    background-image: linear-gradient(to right bottom, $color-background, $color-background-1);
+    position: relative;
+
+    @include forLargeScreens(900) {
+        border: 3rem solid $color-white;
+        height: 100%;
+    }
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 5rem;
+}
+
+.heading-secondary {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include forLargeScreens(900) {
+        font-size: 3rem;
+    }
+
+    @include forLargeScreens(1200) {
+        font-size: 3.5rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: 2.4rem;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-background,$color-background-1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heading-quaternary {
+    font-size: 2.2rem;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-white,$color-yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heading-q {
+    font-size: 2rem;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    color: $color-yellow;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    color: $color-grey-dark-2;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

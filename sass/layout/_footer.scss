@@ -1,0 +1,26 @@
+.footer {
+    background-color: $color-primary-dark;
+    padding: 1.6rem 0 7rem;
+    font-size: 1.4rem;
+    color: $color-secondary-light;
+    display: flex;
+    justify-content: center;
+
+    @include forLargeScreens(900) {
+        padding: 2rem 0;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            text-transform: uppercase;
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+}
+

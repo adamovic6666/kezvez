@@ -1,0 +1,29 @@
+.privacy {
+
+    margin: 0 auto;
+    padding: 14rem 5rem;
+
+    
+    @include forLargeScreens(900) {
+        max-width: 100rem;
+    }
+
+    &__para {
+        color: rgb(197, 214, 118);
+        font-size: $default-font-size;
+        animation: colorChange infinite 10s;
+
+        @include forLargeScreens(900) {
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        color: $color-yellow;
+    }
+
+}
+
+.heading-q {
+    text-align: left;
+}
