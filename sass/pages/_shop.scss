@@ -1,0 +1,82 @@
+.shop {
+
+    width: 85vw;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @include forLargeScreens(900) {
+        max-width: $default-width;
+    }
+
+    &__heading-main {
+        margin: 14rem 0 5rem;
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+    }
+
+    &__items {
+        padding: 0 0 10rem;
+        margin: 0 auto;
+        grid-gap: 3rem;
+    
+        @include forLargeScreens(900) {
+            padding: 5rem 0 15rem;
+            max-width: $default-width;
+        }
+
+        @include forLargeScreens(1200) {
+            grid-gap: 6rem;
+        }
+    }
+
+    &__filters {
+        padding: 0 10rem;
+        @include display-flex--row;
+        justify-content: center;
+    }
+
+    &__button {
+        font-family: inherit;
+        display: inline-block;
+        font-weight: 700;
+        padding: .75rem 2rem;
+        border: 1px solid $color-yellow;
+        border-radius: 10rem;
+        outline: none;
+        width: 15rem;
+        background: transparent;
+        color: $color-yellow;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__select {
+        font-family: inherit;
+        display: block;
+        font-size: $default-font-size;
+        font-weight: 700;
+        padding: .75rem 2rem;
+        width: auto;
+        box-sizing: border-box;
+        border: 1px solid $color-yellow;
+        border-radius: 10rem;
+        appearance: none;
+        background-color: transparent;
+        color: $color-yellow;
+        margin-left: 2rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        option {
+            background-color: white;
+            color: $color-primary-dark;
+            margin-top: 1rem;
+        }
+    }
+}

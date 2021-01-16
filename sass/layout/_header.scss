@@ -1,0 +1,32 @@
+.header {
+
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+
+
+    @include forLargeScreens(900) {
+        width: 100%;
+    } 
+
+    &__desktop {
+
+        display: none;
+
+        @include forLargeScreens(900) {
+            @include display-flex--column;
+            flex-wrap: wrap;
+        } 
+
+        @include forLargeScreens(1200) {
+            flex-wrap: nowrap;
+            padding-top: 0;
+        }
+
+    }
+
+}
+
+
+
+

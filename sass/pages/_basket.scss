@@ -1,0 +1,74 @@
+.basket {
+
+    &__products {
+        margin: 0 auto;
+        padding: 0 0 10rem;
+        text-align: center;
+        width: 85vw;
+        max-width: 70rem;
+    
+        @include forLargeScreens(900) {
+            padding: 5rem 5rem 0;
+            max-width: 110rem;
+        }
+    }
+
+    &__heading-main {
+        margin-top: 14rem;
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+    }
+
+    &__total {
+        display: inline-block;
+        font-size: 1.8rem;
+        border-radius: 10rem;
+        color: $color-white;
+        background: $color-primary-dark;
+        text-transform: uppercase;
+        color: $color-white;
+        padding: 1.25rem 2.5rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+
+        @include forLargeScreens(900) {
+           margin-bottom: 6rem;
+           align-self: flex-end;
+
+        }
+    }
+
+    &__proceed-btn {
+        width: auto;
+    }
+
+    &__details {
+        
+        @include display-flex--column;
+        align-items: center;
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 0 0 10rem;
+        max-width: 85vw;
+
+    
+        @include forLargeScreens(900) {
+            justify-content: flex-end;
+            max-width: 100rem;
+            padding: 5rem 5rem 15rem;
+
+            a {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &__empty-para {
+        font-size: 5rem;
+        background-image: linear-gradient(to right, $color-white, $color-yellow);
+        -webkit-background-clip: text;
+        color: transparent;    
+    }
+}
+

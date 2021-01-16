@@ -1,0 +1,74 @@
+@keyframes colorChange {
+
+    0% {
+        color:white;
+    }
+
+    10% {
+        color:rgb(217, 255, 231);
+    }
+
+    20% {
+        color:rgb(255, 230, 235);
+    }
+
+    30% {
+        color:rgb(255, 217, 234);
+    }
+
+    40% {
+        color:rgb(254, 214, 255);
+    }
+
+    50% {
+        color:rgb(237, 255, 174);
+    }
+
+    60% {
+        color:rgb(221, 231, 255);
+    }
+
+    70% {
+        color:rgb(209, 255, 240);
+    }
+
+    80% {
+        color:rgb(219, 255, 212);
+    }
+
+    90% {
+        color:rgb(255, 217, 217);
+    }
+
+    100% {
+        color:rgb(255, 249, 226);
+    }
+
+}
+
+@keyframes popUp {
+
+    0% {
+        top: 20%;
+    }
+
+    100% {
+        top: 50%;
+    }
+
+}
+
+
+@keyframes slideIn {
+
+    0% {
+        opacity: 0;
+        transform: scale(.7) translateY(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}

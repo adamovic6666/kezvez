@@ -1,0 +1,47 @@
+.modal-deletion {
+    position: fixed;
+    @include display-flex--column;
+    justify-content: space-between;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 20rem;
+    width: 40rem;
+    border: 1px solid $color-yellow;
+    z-index: 2000;
+    padding: 2rem;
+    border-radius: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .3s;
+
+    &__para {
+        color: $color-yellow;
+        font-size: 2.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__wrapper {
+        @include display-flex--row;
+        justify-content: space-evenly;
+    }
+
+    &__btn {
+        width: 10rem;
+        letter-spacing: .2rem;
+        text-align: center;
+        margin-top: auto;
+        padding: .25 1rem !important;
+    }
+}
+
+.modal-deletion__open {
+
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+}

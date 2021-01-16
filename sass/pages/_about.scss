@@ -1,0 +1,57 @@
+.section-about-me {
+
+    margin: 0 auto;
+    padding: 15rem 0;
+    z-index: 10;
+    width: 85vw;
+    max-width: 70rem;
+
+    &:last-child {
+        position: relative;
+    }
+
+    @include display-flex--column;
+    justify-content: center;
+    align-items: center;
+
+    @include forLargeScreens(900) {
+        padding: 14rem 5rem 20rem;
+        max-width: $default-width;
+    }
+
+}
+
+.about {
+
+    &__heading-main {
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+    }
+
+    &__box {
+        position: relative;
+    }
+
+    &__para {
+        color: rgb(197, 214, 118);
+        font-size: $default-font-size;
+        animation: colorChange infinite 10s;
+
+        @include forLargeScreens(900) {
+            width: 75ch;
+        }
+    }
+
+    &__first-word {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline;
+        background-image: linear-gradient(to bottom, rgb(255, 13, 162), rgb(255, 41, 173),rgb(252, 90, 190));
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        line-height: 1;
+    }
+}

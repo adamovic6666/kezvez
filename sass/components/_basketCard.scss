@@ -1,0 +1,233 @@
+.basketCard {
+
+    height: 50rem;
+    position: relative;
+    border-radius: 8px;
+    max-width: 50rem;
+    box-shadow: 0 4px 4px rgba($color-white, 0.2);
+    @include display-flex--column;
+    overflow: hidden;
+    padding: 2rem;
+    background-image: linear-gradient(to right, rgba($color-primary, .9), rgba($color-primary, .9));
+
+    &:not(:last-child) {
+        margin: 0 auto 8rem;
+    }
+
+    &:last-child {
+        margin: 0 auto;
+    }
+
+    @include forLargeScreens(900) {
+        @include display-flex--row;
+        max-width: 90rem;
+        border-radius: 1rem;
+        height: 27rem;
+        padding: 0;
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary, .5));
+    }
+
+    &__product-details,
+    &__product-qty{
+
+        height: 50%;
+        @include display-flex--row;
+
+        @include forLargeScreens(900) {
+            height: auto;
+        }
+    }
+
+    &__product-details {
+        color: white;
+
+        @include forLargeScreens(900) {
+            @include display-flex--row;
+            width: 60%;
+            padding: 0;
+        }
+    }
+
+    &__product-qty {
+        @include forLargeScreens(900) {
+            height: auto;
+            padding-right: 2rem;
+        }
+    }
+    
+    &__image-box{
+        height: 100%;
+        margin-right: 0;
+
+        @include forLargeScreens(900) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        @include forLargeScreens(900) {
+            position: relative;
+            width: 20rem;
+            mix-blend-mode: multiply;
+            z-index: 10;
+        }
+    }
+    
+    &__info-box{
+        @include display-flex--column;
+        justify-content: space-around;
+        font-size: $default-font-size;
+        width: 100%;
+    }
+
+    
+    &__product-name,
+    &__product-price,
+    &__product-size {
+        @include display-flex--row;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        
+        @include forLargeScreens(900) {
+            justify-content: left;
+        }
+    }
+
+    &__product-name span:nth-of-type(1),
+    &__product-price span:nth-of-type(1),
+    &__product-size span:nth-of-type(1) {
+        margin-right: 1rem;
+    }
+
+    &__product-name,
+    &__product-price,
+    &__product-size {
+        font-size: 1.7rem;
+    }
+
+    &__product-name span:nth-of-type(2),
+    &__product-price span:nth-of-type(2),
+    &__product-size span:nth-of-type(2),
+    &__qty-box {
+        border: 1px solid $color-white;
+        padding: .5rem 2rem;
+        border-radius: 10rem;
+        display: inline-block;
+    }
+
+    &__qty-box {
+        @include display-flex--row;
+    }
+
+    
+    &__quantity-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem 2rem;
+        border-radius: 10rem;
+        border: 1px solid $color-white;
+    }
+
+    &__quantity-minus,
+    &__quantity-plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: $color-white;
+        border: 1px solid $color-white;
+        color: $color-primary-dark;
+        cursor: pointer;
+
+        span {
+            font-weight: 700;
+            font-size: $default-font-size;
+            display: inline-block;
+        }
+    }
+
+    &__qty {
+        width: 32px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    &__label-qty {
+        margin-right: 1rem;
+    }
+
+    &__product-price-box {
+        display: flex;
+        border: 1px solid $color-white;
+        padding: .5rem 2rem;
+        border-radius: 10rem;
+        margin-left: 1rem
+    }
+
+    &__product-total-price {
+        @include display-flex--row;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    &__product-qty {
+        @include display-flex--column;
+        color: $color-white;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: $default-font-size;
+
+        @include forLargeScreens(900) {
+            width: 40%;
+        }
+    }
+
+    
+    &__product-qty-box,
+    &__product-total-box,
+    &__product-delete {
+        @include display-flex--row;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        @include forLargeScreens(900) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__product-delete {
+
+        button {
+            outline: none;
+            border: none;
+            display: inline-block;
+            margin-left: auto;
+            padding: .75rem 2rem;
+            line-height: 1.7;
+            color: $color-white;
+            background: $color-primary-dark;
+            border-radius: 10rem;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}

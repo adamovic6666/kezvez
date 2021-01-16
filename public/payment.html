@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
+        <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/main.css">
+        
+    </head>
+    <body>
+
+        <!-- <div class="backdrop backdrop--white">
+            <div class="loader">Loading...</div>
+        </div> -->
+        <header class="header">
+            <nav class="mobile__nav-top">
+                <div class="mobile__img-box">
+                    <a href="https://www.instagram.com/kezvez/?hl=en" target="_blank" class="mobile__link" >
+                        <img src="assets/instagram-black.png" alt="instagram-logo" class="mobile__img mobile__img--opacity8">
+                    </a>
+                </div>
+                <div class="mobile__img-box">
+                    <a href="index.html" class="mobile__link" >
+                        <img src="assets/logo-pink.png" alt="logo" class="mobile__img">
+                    </a>
+                </div>
+                <div class="mobile__img-box">
+                    <a href="basket.html" class="mobile__link" >
+                        <img src="assets/basket-black.png" alt="basket-logo" class="mobile__img mobile__img--opacity8">
+                        <span class="mobile__basket-qty mobile__qty">0</span>
+                    </a>
+                </div>
+            </nav>
+            <nav class="mobile__nav-bottom">
+                <a href="about.html" class="mobile__nav-items">about us</a>
+                <a href="shop.html" class="mobile__nav-items">shop</a>
+                <a href="contact.html" class="mobile__nav-items">contact</a>
+            </nav>
+            <div class="header__desktop">
+                <div class="desktop__purchase">
+                    <div class="desktop__image-box">
+                        <a href="index.html">
+                            <img src="assets/logo-small.png" alt="logo" class="desktop__img">
+                        </a>
+                    </div>
+                    <div class="desktop__purchase-container">
+                        <a class="desktop__item-box" href="https://www.instagram.com/kezvez/?hl=en" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram-logo" class="mobile__img mobile__img--opacity7">
+                        <a>
+                        <a class="desktop__item-box" href="basket.html">
+                            <img src="assets/basket.png" alt="basket-logo" class="mobile__img mobile__img--opacity7">
+                            <span class="mobile__basket-qty desktop__qty">0</span>
+                        </a>
+                        <div class="desktop__item-box desktop__item-box--p">
+                            <p class="total">0</p><span>,00 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="desktop__nav">
+                    <a href="about.html" class="desktop__link">about us</a>
+                    <a href="shop.html" class="desktop__link">shop</a>
+                    <a href="contact.html" class="desktop__link">contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="order-info">
+
+            <div class="payment__heading">
+                <h1 class="payment__heading-main u-margin-bottom-big">Vaši podaci</h1>
+                <h1 class="payment__heading-main u-margin-bottom-big">Vaša porudžbina</h1>
+            </div>
+
+            <form action="#" class="payment">
+                <div class="payment__group">
+                    <input type="text" class="form__input" placeholder="Ime i prezime" id="name" required>
+                    <label for="name" class="form__label">Ime i prezime</label>
+                </div>
+                <div class="payment__group">
+                    <input type="text" class="form__input" placeholder="Ulica i kućni broj" id="address" required>
+                    <label for="address" class="form__label">Ulica i kućni broj</label>
+                </div>
+                <div class="payment__group">
+                    <input type="text" class="form__input" placeholder="Mesto/Grad" id="city" required>
+                    <label for="city" class="form__label">Mesto/Grad</label>
+                </div>
+                <div class="payment__group">
+                    <input type="text" class="form__input" placeholder="Poštanski broj" id="postcode" required>
+                    <label for="postcode" class="form__label">Poštanski broj</label>
+                </div>
+                <div class="payment__group">
+                    <input type="tel" class="form__input" placeholder="Telefon" id="telephone" required>
+                    <label for="telephone" class="form__label">Telefon</label>
+                </div>
+                <div class="payment__group">
+                    <input type="email" class="form__input" placeholder="Email adresa" id="email" required>
+                    <label for="email" class="form__label">Email adresa</label>
+                </div>
+                <div class="payment__heading-mobile">
+                    <h1 class="payment__heading-main u-margin-bottom-big">Vaša porudžbina</h1>
+                </div>
+                <div class="order">
+                    <div class="order__box"></div>
+                    <span class="order__total">UKUPNO:<span class="order__total-price"></span>Rsd.</span>
+                </div>
+                <div class="payment__group">
+                    <textarea name="textarea" class="form__input" id="textarea" cols="30" rows="11" placeholder="Dodatne informacije" required></textarea>
+                    <label for="textarea" class="form__label">Dodatne informacije</label>
+                </div>
+                <div class="payment__group">
+                    <button class="btn btn--white">Poruči</button>
+                </div>
+            </form>
+            <div class="order__info">
+                <p class="order__info-para">Plaćate pouzećem prilikom preuzimanja robe.</p>
+                <p class="order__info-para">Vaši podaci će biti korišćeni u svrhu slanja porudžbine, poboljšanja tvog iskustva na našem sajtu, i u ostale svrhe navedene u politika privatnosti.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <a href="privacy.html" class="footer__link">Politika privatnosti</a>
+        </footer>
+
+        <script src="js/shared.js"></script>
+        <script src="js/payment.js"></script> 
+
+    </body>    
+</html>

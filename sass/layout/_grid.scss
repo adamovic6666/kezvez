@@ -1,0 +1,20 @@
+.row {
+
+    max-width: 60rem;
+    margin: 0 auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    @include forLargeScreens(900) {
+
+        max-width: $default-width;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.default-row {
+    max-width: $default-width;
+    margin: 0 auto;
+    height: auto;
+}

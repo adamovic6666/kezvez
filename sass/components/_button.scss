@@ -1,0 +1,101 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+
+        font-family: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 10rem;
+        transition: all .3s;
+        letter-spacing: .05rem;
+        position: relative;
+        color:$color-primary-light;
+        padding: 1.5rem 3.5rem;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        width: max-content;
+        line-height: inherit;
+
+        display: flex;
+        align-items: center;
+
+    
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    &--white,
+    &--white-small {
+        color: $color-primary;
+        background-color: $color-white;
+        font-weight: 700;
+        font-size: 1.75rem;
+
+        @include forLargeScreens(900) {
+            background-color: rgba($color-white, .9);
+        }
+
+        &:hover {
+            color: $color-primary !important;
+            background: $color-white;
+        }
+    }
+
+    &--white-small {
+        padding: 1rem 2.5rem !important;
+        font-size: $default-font-size !important;
+    }
+
+    &--purple {
+        background: rgba($color-primary-light,.85) !important;
+        color: $color-white !important;
+        font-weight: 700;
+        font-size: 1.8rem !important;
+
+        &:hover {
+            background: $color-primary-light !important;
+        }
+    }
+
+    &__deletion-hover-yes {
+        &:hover {
+            background: $color-primary-light !important;
+        }
+    }
+
+    &--deletion {
+        color: $color-white;
+        font-size: 1.7rem;
+
+    }
+
+    &--deletion-hover-yes {
+
+        border: 1px solid $color-white;
+        background-color: rgba($color-red, .7) !important;
+
+        &:hover,
+        &:active {
+            background-color: rgba($color-red, .9) !important;
+            border: 1px solid $color-white;
+        }
+    }
+
+    &--deletion-hover-no {
+
+        border: 1px solid $color-white;
+        background-color: transparent;
+
+        &:hover,
+        &:active {
+            background-color: rgba($color-grey-dark-2, .9);
+            border: 1px solid $color-white;
+        }
+    }
+
+    
+}
